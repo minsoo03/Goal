@@ -7,6 +7,8 @@ Pointer Note
 
 ( ex. int형 데이터는 4바이트! but, 주소 값은 시작 주소 오직 1 바이트만 )
 
+
+
 ![1](https://user-images.githubusercontent.com/54320003/223411324-264a930d-b03a-4337-aa58-062004c1a2c2.png)
 
 
@@ -23,3 +25,13 @@ int n = 100; // 이건 변수 선언
 int *ptr = &n; // 이건 포인터 선언 
 </code>
 </pre>
+
+
+
+![2](https://user-images.githubusercontent.com/54320003/223412846-ab059550-98a5-41b0-902e-a29d48f2ac8d.png)
+
+= 사용된 변수와 포인터가 메모리에서 어떻게 저장되는 지 보여주는 예제
+
+
+### 포인터 연산자
+
