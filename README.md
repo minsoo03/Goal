@@ -1,4 +1,4 @@
-Pointer Note
+C Note
 =============
 
 데이터 주소값 : 해당 데이터가 저장된 메모리의 시작 주소 
@@ -123,3 +123,91 @@ int main()
 4. 첫 번째 코드는, print문이 두 포인터 간의 거리를 나타내며, 포인터 간의 뺄셈으로 계산
 5. 두번째 print문은 두 포인터 간의 바이트 수 계산, ptr1 와 ptr2 간의 거리를 바이트 단위로 계산
  ** 이 때, 각 포인터 타입은 int*이므로 char *를 사용하여 char 포인터로 변환!!!!! 신기하노 ㅋ
+ 
+ 
+ -----
+ 
+ #include<stdio.h> 이란 무엇인가??
+ = #include는 헤더 파일을 포함하는 문법 , prinf 함수를 이용하려면 stdio.h 파일이 필요하다.
+ => 다양한 함수를 사용하려면 다양한 헤더파일이 필요하다.
+ 
+ ----
+ 
+ C언어 프로그램은 main 함수부터 실행된다! (중요)
+ 
+ ----
+ 
+ ##서식 지정자
+ 
+ 서식 지정자는 printf로 문자열을 출력할 때 값으로 바뀌는 부분을 뜻한다.
+ 
+<pre>
+<code>
+printf( "%s\n", "Hello World!");
+</pre>
+</code>
+이 경우, printf에 %s를 사용한 뒤, Hello World를 넣어주면 %s 부분이 Hello world로 바뀐다. (%s는 문장 , %c는 한 단어)
+
+----
+
+##변수
+
+정수 : char , short, int, long
+실수 : float, double
+포인터 사용할 시 : void
+
+"변수를 초기화한다" = 변수를 선언하면서 값을 할당하는 과정
+
+
+
+----
+
+#정수 자료형
+
+signed : 부호 있는 정수 , 보통 signed 는 생략한다.
+unsigned : 부호 없는 정수 표현 , 값은 0부터 시작한다.
+
+|자료형|크기|범위|
+|------|---|---|
+|char , signed char|1byte , 8bit|-128 ~ 127|
+|unsigned char|1byte , 8bit|0 ~ 255|
+|short|2byte , 16bit|-32,768 ~ 32,767|
+|unsigned short|2byte , 16bit|0 ~ 65,535|
+|int, signed|4byte , 32bit| ~ |
+|unsigend|4byte , 32 bit| ~ |
+|long, signed long|4byte, 32bit| ~ |
+|unsigned long|4byte , 32bit| ~ |
+|long long, signed long long|8byte, 64bit| ~ |
+|unsigned long long|8byte, 64bit| ~ |
+
+*int는 생략 가능하다.
+
+- 크기로 따졌을 때 (범위제외)
+char < short < int , signed < long < long long
+
+값에 대해 저장할 수 있는 최댓값을 초과하거나, 최솟값 미만 값의 type을 쓴다고 하면 오버플로우 , 언더플로우가 생긴다. -> 최솟값, 최댓값에서부터 다시 시작한다.
+
+##자료형 크기
+
+sizeof(자료형) 
+sizeof(표현식)
+sizeof 표현식
+* 단, 자료형의 크기를 직접적으로 구할려면 띄어쓰기 대신 괄호
+
+sizeof 표현식 을 통해 자료형의 크기를 구할 수 있다.
+
+-- 실수 자료형
+
+float - 4byte , 32bit
+double - 8byte , 64bit
+long double - 8byte , 64bit
+
+-- 상수 사용하기
+
+10진수 -> 숫자 그대로 표현
+8진수 -> 숫자 앞에 0 붙이기 ( 서식 지정자는 %o 사용해야함 )
+16진수 -> 0x 붙이기
+
+상수 선언 -> 자료형 앞에 const 붙이기 
+but, 상수는 반드시 선언과 동시에 값 할당 -> 초기화 시켜주어야함 ( 초기화 하지 않으면 컴파일 에러)
+
